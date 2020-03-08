@@ -1,0 +1,22 @@
+<div class="layout">
+    <div class="order-list">
+        <div *ngIf="orders!=undefined" class="orders">
+            <div class="order" *ngFor="let order of orders">
+                <div class="title"><h1>Order for #{{order.customer.id}}</h1></div>
+                <div class="body">
+                    <ul>
+                        <li>Placed in: <span>{{order.placed | date}}</span> </li>
+
+                        <li *ngIf="order.shipped!=null">Shipped in:  <span> {{ order.shipped | date }}</span></li>
+                        <li *ngIf="order.shipped == null" style="color: var(--accent-color)">Pending</li>
+                    </ul>
+                    <hr>
+                    <p>Total: <span>{{ order.total | currency}}</span> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <app-paginator [activePage]="pageNumber" [nbOfPages]="maxPages" (paginationClicked)="updatePage($event)"></app-paginator>
+    </div>
+</div>

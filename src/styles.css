@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --background-color:  #CFCFCC;
+    --primary-color: #D9D9D9;
+    --secondary-color: #5A8DE7;
+    --secondary-color-focus: #4169E2;
+    --accent-color: rgb(221, 120, 120);
+    --font-color: #8d8d8a;
+    --chart-color-green: #92d892;
+    --chart-color-pink:#e29d9d;
+    --chart-color-beige: #d6c56c;
+    --chart-color-purple: #c48ec1;
+    --chart-color-orange: #e0a672;
+    --chart-color-blue: #8ecee4;
+}
+
+body{
+    background-color: var(--background-color);
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}

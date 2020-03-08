@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="paginator">
+        <div [ngClass]=" { 'disabled': activePage== 1 } "
+         (click)="goPrevious()"> Previous </div>
+        <div [ngClass]=" { 'disabled': activePage == nbOfPages } "
+        (click)="goNext()"> Next </div>
+    </div>
+</div>

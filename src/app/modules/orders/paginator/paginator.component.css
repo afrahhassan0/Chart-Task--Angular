@@ -1,0 +1,38 @@
+.container{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.paginator{
+    width: 200px;
+    border: solid thin var(--secondary-color);
+    display: flex;
+    /* box-shadow:0 0 2px var(--secondary-color-focus); */
+    border-radius: 5px;
+    color: var(--font-color);
+}
+
+.paginator > div{
+    padding: 8px 10px;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.paginator > div:hover{
+    font-weight: 600;
+    box-shadow: inset 0 0 5px var(--secondary-color-focus);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.paginator > div.disabled{
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.paginator > div:first-child{
+    border-right: solid 1px var(--secondary-color-focus);
+}

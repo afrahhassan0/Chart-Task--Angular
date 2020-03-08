@@ -1,0 +1,50 @@
+<div class="background"></div>
+
+<nav class="collapsed">
+    <div class="menu" (click)="showNav()"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <ul id="list" class="hide"> 
+        <li
+            (click)="showNav()"
+            (mouseover)="checkIfActive($event.target)"
+            (mouseleave)= "resetIfNeeded($event.target)"
+            routerLink="/general" 
+            routerLinkActive="active"
+            >
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+            General
+        </li>            
+        <li
+            (click)="showNav()"
+            (mouseover)="checkIfActive($event.target)"
+            (mouseleave)= "resetIfNeeded($event.target)"
+            (click)= "resetIfNeeded($event.target)"
+            routerLink="/customer" 
+            routerLinkActive="active"
+            >
+            <i class="fa fa-users" aria-hidden="true"></i>
+            Customer
+        </li>
+        <li
+            (click)="showNav()"
+            (mouseover)="checkIfActive($event.target)"
+            (mouseleave)= "resetIfNeeded($event.target)"
+            (click)= "resetIfNeeded($event.target)"
+            routerLink="/order" 
+            routerLinkActive="active"
+            >
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            Orders
+            </li>
+        <li
+            (click)="showNav()"
+            (mouseover)="checkIfActive($event.target)"
+            (mouseleave)= "resetIfNeeded($event.target)"
+            (click)= "resetIfNeeded($event.target)"
+            routerLink="/shipper"
+            routerLinkActive="active"
+        >
+            <i class="fa fa-sliders" aria-hidden="true"></i> 
+            Shippers
+        </li>
+    </ul>
+</nav>

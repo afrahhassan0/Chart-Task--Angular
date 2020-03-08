@@ -1,0 +1,19 @@
+<div class="layout">
+    <div *ngIf="customerData!=undefined" class="customers">
+        <app-accordeon>
+            <app-panel 
+            *ngFor = "let customer of customerData"
+            [title] = "customer.name"
+            (togglePanel) = "getDetailsOfCustomer(customer.id)"
+            >
+            <h4> Breifing of {{ customer.name }}: </h4>
+                    <ul>
+                        <li *ngFor="let order of customerOrders" >
+                            Ordered {{ order.total | currency }} on 
+                            {{ order.placed | date}}
+                        </li>
+                    </ul>
+        </app-panel>
+        </app-accordeon>
+    </div>
+</div> 

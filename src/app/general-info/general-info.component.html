@@ -1,0 +1,26 @@
+<div class="layout">
+    <div class="charts">
+
+        <div *ngIf="statePieChart!=undefined" class="chart chart-pie">
+            <app-pie-chart [colorScheme]="colorScheme" 
+                           [pieChartData]="statePieChart" 
+                           ></app-pie-chart>
+        </div>
+        
+        <div *ngIf="customerBarChart!=undefined" class="chart chart-bar">
+           <app-vertical-chart [colorScheme]="colorScheme" 
+                               [verticalChartData]="customerBarChart"
+                               ></app-vertical-chart>
+
+        </div>
+    </div>
+    <div class="charts">
+        <div *ngIf="ordersLineChart!=undefined" class="chart chart-line">
+            <app-line-chart [scheme]="colorScheme"
+                            [xAxisLabel]="xAxisLabel" 
+                            [yAxisLabel]="yAxisLabel"
+                            [results] = "ordersLineChart"
+                            ></app-line-chart>
+        </div>
+    </div>
+</div>

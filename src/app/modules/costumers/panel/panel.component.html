@@ -1,0 +1,9 @@
+<div class="panel">
+    <div class="title" (click)="togglePanel.emit()">
+        <h3> {{ title }} </h3>
+        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+    </div>
+    <div class="body" *ngIf="isOpen == true">
+        <ng-content></ng-content>
+    </div>
+</div>

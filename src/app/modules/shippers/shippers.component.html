@@ -1,0 +1,16 @@
+<div class="layout">
+    <div *ngIf="shipperData != undefined" class="shippers">
+        <div *ngFor="let shipper of shipperData" class="shipper">
+            <div>
+                <h1>{{ shipper.name }}</h1>
+            </div>
+            <div>
+                <h3 *ngIf="shipper.isOnline == true" style="color: var(--accent-color); font-weight: 700;"> Inactive </h3>
+                <h3 *ngIf="shipper.isOnline == false" style="color: var(--chart-color-green); font-weight: 700;"> Active </h3>
+                <div class="toggle" (click)="toggleActive()"> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

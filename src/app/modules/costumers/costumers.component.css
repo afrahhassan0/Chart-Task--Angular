@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+
+.layout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;   
+    justify-content: right; 
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+.customers{
+    position: relative;
+    width: 70%;
+    background-color: var(--primary-color);
+    border-radius: 5px; 
+}
+
+ul{
+    list-style: none;
+    padding:0;
+}
+
+li{
+    display: block;
+    padding: 8px 5px;
+}
